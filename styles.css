@@ -1,0 +1,162 @@
+:root{
+  --fondo-1: #072b4f;    /* tono profesional: azul profundo */
+  --fondo-2: #0b3b5c;    /* degradado sutil */
+  --texto: #b48181;
+  --muted: #040404;
+  --acento: #4f46e5;
+  --acento-2: #06b6d4;
+  --max-ancho: 1100px;
+  --radio: 10px;
+  --espacio: 1.25rem;
+}
+
+/* reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: Inter, system-ui, Arial, sans-serif; }
+
+/* fondo y contenedor */
+body {
+  background: linear-gradient(180deg, var(--fondo-1) 0%, var(--fondo-2) 100%);
+  color: var(--texto);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+.contenedor {
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+  padding: calc(var(--espacio) * 1.25);
+}
+
+/* cabecera */
+.cabecera {
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  position: sticky;
+  top: 0;
+  background: rgba(2,6,23,0.15);
+  backdrop-filter: blur(4px);
+  padding: calc(var(--espacio) / 1.2) 0;
+}
+.cabecera .contenedor { display: flex; align-items: center; justify-content: space-between; gap: var(--espacio); }
+.logo { font-weight: 700; color: var(--texto); text-decoration: none; letter-spacing: 0.3px; }
+.navegacion a { color: var(--muted); margin-left: 1rem; text-decoration: none; font-size: 0.95rem; }
+
+/* hero */
+.grid { display: grid; grid-template-columns: 1fr 400px; gap: calc(var(--espacio) * 1.2); align-items: center; padding: calc(var(--espacio) * 1.5) 0; }
+h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.6rem; line-height: 1.1; }
+.entrada { color: var(--muted); margin-bottom: 1.1rem; max-width: 60ch; }
+.botones { margin-top: 0.8rem; }
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
+.btn { background: linear-gradient(90deg, var(--acento), var(--acento-2)); }
+.secundario {
+  background: transparent;
+  color: var(--texto);
+  border: 1px solid rgba(255,255,255,0.06);
+  margin-left: 0.6rem;
+  padding: 0.55rem 0.9rem;
+}
+
+/* tarjeta de imagen */
+.tarjeta {
+  background: rgba(255,255,255,0.02);
+  padding: calc(var(--espacio) / 1.2);
+  border-radius: var(--radio);
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.tarjeta img { width: 100%; height: auto; border-radius: 8px; display: block; }
+.tarjeta figcaption { color: var(--muted); margin-top: 0.7rem; font-size: 0.95rem;color: red; }
+
+/* sobre mi */
+.sobre {
+  margin-top: calc(var(--espacio) * 1.5);
+  background: rgba(255,255,255,0.01);
+  padding: calc(var(--espacio) * 1);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+.habilidades {
+  display: flex;
+  gap: 0.6rem;
+  list-style: none;
+  margin-top: 0.9rem;
+  flex-wrap: wrap;
+}
+.habilidades li {
+  background: rgba(255,255,255,0.02);
+  padding: 0.45rem 0.7rem;
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+/* pie */
+.pie { margin-top: calc(var(--espacio) * 1.2); color: var(--muted); text-align:center; padding: 0.9rem 0; font-size: 0.9rem; }
+
+/* responsivo */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; text-align: center; }
+  .navegacion { display: none; }
+  .tarjeta { order: -1; }
+}
+
+
+/* sección de contacto */
+.contacto {
+  margin-top: calc(var(--espacio) * 1.2);
+  background: rgba(255,255,255,0.01);
+  padding: calc(var(--espacio) * 0.9);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.02);
+}
+
+.contactos {
+  list-style: none;
+  margin: 0.8rem 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.contactos li {
+  background: rgba(255,255,255,0.02);
+  padding: 0.7rem;
+  border-radius: 8px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.contactos li strong {
+  display: block;
+  color: var(--texto);
+  margin-bottom: 0.4rem;
+  font-weight: 700;
+}
+
+.contactos a {
+  color: var(--acento-2);
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contactos a:hover,
+.contactos a:focus {
+  text-decoration: underline;
+}
+
+/* Responsivo: apilar en pantallas pequeñas */
+@media (max-width: 700px) {
+  .contactos { grid-template-columns: 1fr; }
+}
+
