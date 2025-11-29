@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Número Secreto</title>
+  <link rel="stylesheet" href="proyectos.css" />
+
+</head>
+
+<body>
+  <main class="card" role="main" aria-labelledby="title">
+   <h1 id="title">Adivina El Número Secreto</h1>
+    <label for="guess">Indica un número del 1 al 10</label>
+    <input id="guess" type="number" min="1" max="10" inputmode="numeric" autocomplete="off" />
+    <div id="validation" class="validation" aria-live="polite"></div>
+
+    <div class="controls">
+      <button id="tryBtn" class="try">Verificar</button>
+      <button id="newBtn" class="reset">Intentar de Nuevo</button>
+    </div>
+
+    <div id="message" class="message" aria-live="polite">Empieza el juego, intenta adivinar.</div>
+
+    <div class="info-row">
+      <div class="small" id="attemptsInfo">Intentos: 0</div>
+      <div class="small" id="resultSummary"></div>
+    </div>
+
+    <h2 class="history-title">Historial de intentos</h2>
+    <ul id="history" class="history" aria-live="polite"></ul>
+
+  <script src="numero secreto.js"></script>
+</body>
+</html>

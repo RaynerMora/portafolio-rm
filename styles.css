@@ -1,6 +1,6 @@
 :root{
-  --fondo-1: #072b4f;    /* tono profesional: azul profundo */
-  --fondo-2: #0b3b5c;    /* degradado sutil */
+  --fondo-1: #072b4f; 
+  --fondo-2: #0b3b5c;    
   --texto: #b48181;
   --muted: #040404;
   --acento: #4f46e5;
@@ -10,11 +10,11 @@
   --espacio: 1.25rem;
 }
 
-/* reset básico */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html, body { height: 100%; font-family: Inter, system-ui, Arial, sans-serif; }
 
-/* fondo y contenedor */
+
 body {
   background: linear-gradient(180deg, var(--fondo-1) 0%, var(--fondo-2) 100%);
   color: var(--texto);
@@ -29,7 +29,7 @@ body {
   padding: calc(var(--espacio) * 1.25);
 }
 
-/* cabecera */
+
 .cabecera {
   border-bottom: 1px solid rgba(255,255,255,0.04);
   position: sticky;
@@ -39,10 +39,10 @@ body {
   padding: calc(var(--espacio) / 1.2) 0;
 }
 .cabecera .contenedor { display: flex; align-items: center; justify-content: space-between; gap: var(--espacio); }
-.logo { font-weight: 700; color: var(--texto); text-decoration: none; letter-spacing: 0.3px; }
+.logo { font-weight: 700; color: var(--texto); text-decoration: none; letter-spacing: 0.3px; background-color: rgba(249, 249, 249, 0.018);}
 .navegacion a { color: var(--muted); margin-left: 1rem; text-decoration: none; font-size: 0.95rem; }
 
-/* hero */
+
 .grid { display: grid; grid-template-columns: 1fr 400px; gap: calc(var(--espacio) * 1.2); align-items: center; padding: calc(var(--espacio) * 1.5) 0; }
 h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.6rem; line-height: 1.1; }
 .entrada { color: var(--muted); margin-bottom: 1.1rem; max-width: 60ch; }
@@ -64,7 +64,16 @@ h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.6rem; line-height: 
   padding: 0.55rem 0.9rem;
 }
 
-/* tarjeta de imagen */
+.navegacion{
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration:none;
+  font-weight: 600;
+  color: #b3fffc;
+  background-color: aqua;
+}
+
 .tarjeta {
   background: rgba(255,255,255,0.02);
   padding: calc(var(--espacio) / 1.2);
@@ -76,7 +85,7 @@ h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 0.6rem; line-height: 
 .tarjeta img { width: 100%; height: auto; border-radius: 8px; display: block; }
 .tarjeta figcaption { color: var(--muted); margin-top: 0.7rem; font-size: 0.95rem;color: red; }
 
-/* sobre mi */
+
 .sobre {
   margin-top: calc(var(--espacio) * 1.5);
   background: rgba(255,255,255,0.01);

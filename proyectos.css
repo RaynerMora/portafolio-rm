@@ -1,0 +1,59 @@
+:root{
+  --bg:#f4f7fb; --card:#fff; --accent:#4a90e2; --success:#00f164; --warn:#f39c12; --danger:#e74c3c; --text:#222;
+}
+*{box-sizing:border-box}
+body{
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background-image: url(img/pexels-pixabay-278887.jpg);
+}
+
+.card{
+  background:var(--card);border-radius:12px;box-shadow:0 6px 20px rgba(32, 53, 85, 0.08);padding:24px;width:420px;
+}
+
+h1{margin:0 0 12px 0;font-size:20px;color:var(--accent)}
+label{display:block;margin-bottom:8px;font-weight:600}
+input[type="number"]{
+  width:100%;padding:10px 12px;font-size:16px;border:1px solid #d7e3f5;border-radius:8px;
+}
+
+input.error{border-color:var(--danger);background:#f80404}
+
+.validation{height:20px;margin-top:6px;color:var(--danger);font-size:13px}
+
+.controls{display:flex;gap:10px;margin-top:12px}
+
+button{flex:1;padding:10px 12px;border:none;border-radius:8px;font-weight:600;cursor:pointer}
+
+button.try{background:var(--accent);color:#000000}
+
+button.reset{background:#f0f4f8;color:var(--text);border:1px solid #e6eef9}
+
+.message{margin-top:14px;padding:12px;border-radius:8px;background:#f7fbff;border:1px solid #e6f0ff;min-height:48px;display:flex;align-items:center}
+
+.message.success{background:#e9fbf0;border-color:#d6f5df;color:var(--success);font-weight:700}
+
+.message.warn{color:var(--warn);font-weight:700}
+
+.info-row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+
+.small{font-size:13px;color:#556}
+
+.history-title{margin:14px 0 8px 0;font-size:14px;color:#333}
+
+.history{list-style:none;padding:0;margin:0;max-height:140px;overflow:auto;border-top:1px dashed #eef5ff}
+
+.history li{padding:8px 6px;border-bottom:1px dashed #f1f6ff;font-size:14px}
+
+.history li.success{background:#f0fff4;color:var(--success);font-weight:700}
+
+.history li.warn{color:var(--warn)}
+
+.clear-history{margin-top:10px;padding:6px 8px;border-radius:6px;background:#fff;border:1px solid #e6eef9;cursor:pointer}
+
