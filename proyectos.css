@@ -10,7 +10,7 @@ body{
  display: flex;
  flex-direction: column;
  align-items: center;
- background-image: url(img/pexels-pixabay-278887.jpg);
+ background-image: url(pexels-pixabay-278887.jpg);
 }
 
 .card{
